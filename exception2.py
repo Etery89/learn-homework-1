@@ -13,10 +13,11 @@
 """
 
 def get_summ(num_one, num_two):
-    """
-    Замените pass на ваш код
-    """
-    pass
+  try:
+    summ_two_numbers = int(num_one) + int(num_two)
+    return summ_two_numbers
+  except ValueError:
+    print('Неверный тип данных. Введите число')
     
 if __name__ == "__main__":
     print(get_summ(2, 2))
@@ -24,3 +25,5 @@ if __name__ == "__main__":
     print(get_summ("4", "4"))
     print(get_summ("five", 5))
     print(get_summ("six", "шесть"))
+
+# Если вызов функции осуществлять через print, то в последних двух случаях она вернёт None
